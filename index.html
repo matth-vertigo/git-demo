@@ -1,383 +1,610 @@
 <!doctype html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
-
 		<title>reveal.js - The HTML Presentation Framework</title>
-
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
-
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
 
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+<section data-markdown>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+# Introduction to Git
+* Matt Carrier
+* Matt Hardwick
+</section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
+<section data-markdown>
+## What Problem does Git Solve?
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+* project.zip
+* project2b.zip
+* project20131116a.zip
+* project20131116c_V2_beta2.zip
+* project20131116_final.zip
+* project20131116_final_done.zip
+* project20131116_finalV2_Real_Final.zip
+* project20131116_finalV2_Real_Final_Submission.zip
+<br />
+<br />
+__Now where did I introduce that bug? D:__
+</section>
+<section data-markdown>
+## What can git do for me?
 
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
+* Keep history of changes
+* Quickly find the difference between code changes
+* Easily undo unwanted code changes
+* Can save lots of time finding bugs (git-bisect)
+* Allow for easy project collaboration (no file locking)
+* Automatically merge branches of code together
+</section>
+<section data-markdown>
+## Why use Git?
 
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+* Easy Setup
+* No internet or servers required
+* It's Free and Open Source
+</section>
+<section data-markdown>
+## Platform Support
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+* __Linux__
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+	* Debian, Ubuntu, Mint
+		* `sudo apt-get install git-core` 
+	* Fedora, CentOS, RedHat
+		* `sudo yum install git`
+* __Mac__
+	* [Xcode](https://developer.apple.com/technologies/tools/)
+	* [Homebrew](http://brew.sh) - `brew install git`
+* __Windows__
+	* [msysgit.github.com](http://msysgit.github.com/)
+	* [git-scm.com](http://git-scm.com/download/win)
+</section>
+<section data-markdown>
 
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
+#TODO: UPDATE ORDER
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+## Topics
 
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+* Initialization
+* Adding / Removing Files
+* Commiting
+* Viewing Changes
+* Branching
+* Cloning
+* Remote Repositories
+* Merging
+* Rebasing
+* Bisecting
+* Gitweb
+* Questions
+* Workflows
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
+</section>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon.css#/themes">Moon</a> -
-						<a href="?theme=simple.css#/themes">Simple</a> -
-						<a href="?theme=solarized.css#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
+<section>
+	<section data-markdown>
+### First time setup
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
+#### Name &amp; Email
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+```bash
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
 
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
+#### Add Color to the UI
 
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
+```bash
+git config --global color.ui true
+```
 
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
+#### For Unix &amp; Mac
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+```bash
+git config --global core.autocrlf input
+git config --global core.safecrlf true
+```
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+#### For Windows Locally _(Not with Putty)_
 
-    var nodes = document.querySelectorAll( selector );
+```bash
+git config --global core.autocrlf true
+git config --global core.safecrlf true
+```
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+	</section>
+	<section data-markdown>
+	### Global Config
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+```
+➜  git-demo  cat ~/.gitconfig          (on branch: master | ✔ )
+[user]
+	name = Matt Carrier
+	email = icecreammatt@gmail.com
+[color]
+	ui = true
+[merge]
+	tool = p4merge
+[core]
+	excludesfile = /Users/matt/.gitignore_global
+[merge]
+	tool = p4merge
+	keepBackup = false
+[mergetool "p4merge"]
+	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+	keepTemporaries = false
+	trustExitCode = false
+	keepBackup = false
+```
+	</section>
+	<section data-markdown>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+### Initializing a repository
+```git
+➜  git-demo  git init
+Initialized empty Git repository in /home/matt/git-demo/.git/
+➜  git-demo  ls -a                     (on branch: master | ✔ )
+.  ..  .git
+➜  git-demo  git status                (on branch: master | ✔ )
+# On branch master
+#
+# Initial commit
+#
+nothing to commit (create/copy files and use "git add" to track)
+➜  git-demo                            (on branch: master | ✔ )
+```
 
-				<section>
-					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+* .git/config
+	</section>
+	<section data-markdown>
+	### Adding and Committing
+```git
+➜  git-demo  touch helloworld.py                                (on branch: master | …)
+➜  git-demo  git status                                         (on branch: master | …)
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	helloworld.py
+nothing added to commit but untracked files present (use "git add" to track)
+➜  git-demo  git add helloworld.py                              (on branch: master | …)
+➜  git-demo  git status                                       (on branch: master | ● 1)
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   helloworld.py
+#
+➜  git-demo  git commit -m 'Added helloworld.py'              (on branch: master | ● 1)
+[master (root-commit) 1da5197] Added helloworld.py
+ 1 file changed, 6 insertions(+)
+ create mode 100644 helloworld.py
+➜  git-demo                                                    (on branch: master | ✔ )
+```
+### Commit SHA hash - [[`1da5197`]](#/6/3)
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
+	</section>
+	<section data-markdown>
+### Commit SHA hash
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
+```git
+➜  git-demo  git log                                           (on branch: master | ✔ )
+commit 5ccee9c4f8b331a42365a9fe6181437286e7030a
+Author: Matt Carrier <icecreammatt@gmail.com>
+Date:   Sat Nov 16 22:28:29 2013 +0000
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+    Added ignore file
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+commit 1da519767f5e5902912f8bcaf5797524174bb544
+Author: Matt Carrier <icecreammatt@gmail.com>
+Date:   Sat Nov 16 22:23:48 2013 +0000
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+    Added helloworld.py
+(END)
+```
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
+	</section>
+	<section data-markdown>
+### Removing unwanted files
 
-			</div>
+```git
+➜  git-demo  rm unwantedfile.txt                              (on branch: master | ✔ )
+➜  git-demo  git status                                       (on branch: master | ✚ 1)
+# On branch master
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    unwantedfile.txt
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  git-demo  git rm unwantedfile.txt                          (on branch: master | ✚ 1)
+rm 'unwantedfile.txt'
+➜  git-demo  git status                                       (on branch: master | ● 1)
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    unwantedfile.txt
+#
+➜  git-demo  git commit -m 'Removed unwanted file'             (on branch: master | ● 1)
+[master b3aa958] Removed unwanted file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 unwantedfile.txt
+➜  git-demo                                                    (on branch: master | ✔ )
 
-		</div>
+```
+	</section>
+	<section data-markdown>
+### Ignoring Files
+[List of Good Defaults](https://github.com/github/gitignore/tree/master)
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+```
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
 
-		<script>
+# C extensions
+*.so
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
 
-		</script>
+# Translations
+*.mo
 
-	</body>
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/
+```
+	</section>
+	<section data-markdown>
+* Viewing Changes
+	* git diff
+	* git show
+* Viewing History
+	* Log
+	* Reflog
+	* Show
+	* gitk
+	</section>
+	<section data-markdown>
+* How to undo changes
+	* Revert
+	* Checkout
+	* Reset
+	</section>
+	<section data-markdown>
+* Branching
+	* SHA Markers
+	* Creation
+	* Switching
+	* Deleting
+	* Sharing
+	</section>
+	<section data-markdown>
+* Merging
+	* Merge Conflicts
+	* Cherry-pick
+	</section>
+	<section data-markdown>
+* Rebasing
+	* Squashing
+	* Detached Head
+	</section>
+	<section data-markdown>
+* Cloning
+	* Forking
+	</section>
+	<section data-markdown>
+* Remote Repositories
+	* What is origin
+	* Adding cwolf as a remote
+	* Adding Remotes
+	* Removing Remotes
+	* Pushing
+		* Branches
+	* Fetching Changes
+	</section>
+	<section data-markdown>
+* Bisecting
+	</section>
+	<section data-markdown>
+* GitWeb
+	`git instaweb -d webrick`
+	</section>
+	<section data-markdown>
+* Questions
+	</section>
+</section>
+
+<section data-markdown>
+
+## Workflows
+* Personal Projects
+* Group Projects
+
+</section>
+
+<section>
+	<section data-markdown>
+	## Personal Projects
+	</section>
+	<section data-markdown>
+
+## Basic Setup
+
+```bash
+$ git init
+$ git add -A
+$ git commit -m 'Commit Message'
+
+# Check your status and logs at any time to confirm changes  
+$ git status
+$ git log
+```
+
+	</section>
+	<section data-markdown>
+
+	## Adding remote repos
+
+	* To make your work accessible from other machines using a remote linux server
+
+	1. Login to your remote server that you will use to host the repository and create a folder in your home directory named git
+
+	```
+	cd ~/
+	mkdir git/project-name.git -p   #Create the project folder
+	cd git/project-name.git         
+	git init --bare	             #Initialize empty repository
+	```
+
+	From your local machine inside the existing git folder
+	1. git remote add server_name ssh://username@servername.domain:git/project-name.git
+	1. git push -u --all server_name
+
+	To Push additional changes you can use
+	1. git push server_name branch_name
+
+	To Pull changes down and merge into your code
+	1. git fetch --all
+	1. git rebase server_name/branch_name
+
+	Or Use
+	1. git pull --rebase server_name branch_name #Using rebase will prevent a merge commit which will clutter your history
+
+	1. On a new computer you can clone the repository with the following command
+		`git clone username@servername.domain:git/project-name.git`
+	Repeate above steps for pulling and pushing
+```
+
+	</section>
+</section>
+
+<section data-markdown>
+
+# Feature Workflow with other people using github
+2. Clone the repository
+	`git clone git@github.com:username/repository.git`
+3. Create a new feature branch
+	`git branch featureName`
+4. Checkout the feature branch
+	`git checkout featureName`
+> This can be done with one command as well. `git checkout -b featureName`
+5. Do some feature work
+6. Commit changes
+7. When ready to merge the feature back into master we will first want to update the master branch to get the latest code.
+8. Fetch the latest changes.
+	`git fetch --all`
+9. Rebase your branch against master.
+	`git rebase origin/master`
+12. Push your changes up to github.
+	`git push origin featureName`
+13. Go to Github and open a pull request from the branch.
+14. Merge the pull request on Github.
+
+__NOTE:__ Once you have pushed the branch up to Github you can no longer rebase against master with the same branch name. To get around this you will need to create a new branch name or delete the existing older one.
+
+</section>
+<section data-markdown>
+
+### Git local and remote branch cleanup
+* _How do I remove old remote branches that are no longer needed?_
+
+    `git remote prune origin`
+
+* _How do I remove local branches that are old?_
+
+    `git branch --merged` will display branches that are safe to delete as they have been merged into master.
+
+__NOTE:__ The above command will display the master branch and you probably don't want to delete that one...
+
+`git branch -d <oldBranchNameListedFromAboveCommand>`
+
+* _How do I force delete a local branch that hasn't been merged?_
+
+    `git branch -D <branchNameWhichHasNotBeenMerged>`
+
+### Git Troubleshooting
+
+#### Unable to push changes because a rebase has already occurred.
+
+```
+error: failed to push some refs to 'git@github.com:username/repository.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+'Note about fast-forwards' section of 'git push --help' for details.
+```
+
+To unblock yourself create a new branch by using `git checkout -b newBranchNameSimilarToTheOldOne`
+Push this branch up instead and feel free to delete the old one if no one else is working off of it.
+
+`git push origin :newBranchNameSimilarToTheOldOne`
+
+</section>
+<section data-markdown>
+
+## Command Line Aliases
+
+	alias g='git status'
+	alias ga='git add'
+	alias gc='git commit -m'
+	alias gf='git fetch --all'
+
+	alias gl='git log'
+	alias gll='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+	alias gb='git branch -a'
+	alias gs='git show'
+
+	alias gd='git diff'
+	alias gdw='git diff -w'
+	alias gds='git diff --staged'
+
+	alias gss='git stash save'
+	alias gsp='git stash pop'
+	alias gsl='git stash list'
+	alias gsd='git stash show -p stash@{0}'
+
+	alias gpom='git push origin master'
+	alias gprom='git pull --rebase origin master'
+	alias gp='git pull --rebase'
+	alias grom='git rebase origin/master'
+	alias grc='git rebase --continue'
+
+	alias grh='git reset --hard'
+	alias gclean='git remote prune origin; git branch --merged | grep -v -E "(\*|master)" | xargs -n 1 git branch -d'
+
+	alias gmt='git mergetool'
+
+
+</section>
+<section data-markdown>
+
+## Visual Tools
+
+* [SourceTree](http://sourcetreeapp.com)
+* [gitextensions](https://code.google.com/p/gitextensions/)
+* [Shell Extension](https://code.google.com/p/tortoisegit/)
+* [Visual Studio - Git Plugin](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c)
+* [opendiff](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/opendiff.1.html)
+* [p4Merge](http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools)
+
+</section>
+<section data-markdown>
+
+## Resources
+* [http://gitimmersion.com/lab_01.html](http://gitimmersion.com/lab_01.html)
+* [http://git-scm.com/documentation](http://git-scm.com/documentation)
+* [http://gitready.com](http://gitready.com)
+* [http://gitref.org](http://gitref.org)
+* [http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
+* [http://ndpsoftware.com/git-cheatsheet.html](http://ndpsoftware.com/git-cheatsheet.html)
+* [http://try.github.io/levels/1/challenges/1](http://try.github.io/levels/1/challenges/1)
+* [http://blog.xkoder.com/2008/08/13/git-tutorial-starting-with-git-using-just-10-commands/](http://blog.xkoder.com/2008/08/13/git-tutorial-starting-with-git-using-just-10-commands/)
+
+</section>
+<section data-markdown>
+
+## About
+
+- Matt Carrier
+	- Web [mattcarrier.com](mattcarrier.com)
+	- Github [@icecreammatt](https://github.com/icecreammatt)
+	- Twitter [@icecreammatt](https://twitter.com/icecreammatt)
+
+- Matt Hardwick
+	- Github [@matthewhardwick](https://github.com/matthewhardwick)
+	- Twitter [@matthewhardwick](https://twitter.com/matthewhardwick)
+
+</section>
+</div>
+
+</div>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+<script>
+
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+
+</script>
+</body>
 </html>
