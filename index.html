@@ -391,50 +391,87 @@ docs/_build/
 	<section data-markdown>
 
 ## Basic Setup
-
+### @Localhost
 ```bash
+# Initialize Repository
 $ git init
+
+# Do some work...
+
+# Stage the work you wish to commit
 $ git add -A
-$ git commit -m 'Commit Message'
+
+$ git commit -m 'Inital Commit'
 
 # Check your status and logs at any time to confirm changes  
 $ git status
 $ git log
+
+# Add more files and repeat
+$ git add <filename>
+$ git commit -m 'Added more files...'
 ```
 
 	</section>
 	<section data-markdown>
 
-	## Adding remote repos
 
-	* To make your work accessible from other machines using a remote linux server
+### Adding remote repositories
 
-	1. Login to your remote server that you will use to host the repository and create a folder in your home directory named git
+* To make your work accessible from other machines using a remote linux server do the following: 
 
-	```
-	cd ~/
-	mkdir git/project-name.git -p   #Create the project folder
-	cd git/project-name.git         
-	git init --bare	             #Initialize empty repository
-	```
+1. Login to your remote server that you will use to host the repository.
+2. Create a folder in your home directory named git to store all your repos.
+3. Create a folder to contain the project you will be adding
+4. Initialize the folder as bare repository
 
-	From your local machine inside the existing git folder
-	1. git remote add server_name ssh://username@servername.domain:git/project-name.git
-	1. git push -u --all server_name
+	</section>
+	<section data-markdown>
+### @Remotehost
+```
+cd ~/
+mkdir git/project-name.git -p   #Create the project folder
+cd git/project-name.git         
+git init --bare	             #Initialize empty repository
+Initialized empty Git repository in /home/matt/git/project-name.git/
+```
 
-	To Push additional changes you can use
-	1. git push server_name branch_name
+	</section>
+	<section data-markdown>
 
-	To Pull changes down and merge into your code
-	1. git fetch --all
-	1. git rebase server_name/branch_name
+### @Localhost
+Add the remote server to your repo
+```
+git remote add server_name ssh://username@servername.domain:git/project-name.git
+git push -u --all server_name
+```
 
-	Or Use
-	1. git pull --rebase server_name branch_name #Using rebase will prevent a merge commit which will clutter your history
+To Push additional changes you make after committing
+```
+git push server_name branch_name
+```
 
-	1. On a new computer you can clone the repository with the following command
-		`git clone username@servername.domain:git/project-name.git`
-	Repeate above steps for pulling and pushing
+	</section>
+	<section data-markdown>
+### @Localhost
+To Pull changes down and merge into your code
+```
+git fetch --all`
+git rebase server_name/branch_name
+```
+
+Or Use
+```
+git pull --rebase server_name branch_name 
+
+```
+Using rebase will prevent a merge commit
+	</section>
+	<section data-markdown>
+### @Localhost 2
+On a new computer you can clone the repository with the following command
+```
+	git clone username@servername.domain:git/project-name.git
 ```
 
 	</section>
