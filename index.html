@@ -82,8 +82,6 @@ __Now where did I introduce that bug? D:__
 </section>
 <section data-markdown>
 
-#TODO: UPDATE ORDER
-
 ## Topics
 
 * Initialization
@@ -477,10 +475,14 @@ On a new computer you can clone the repository with the following command
 	</section>
 </section>
 
-<section data-markdown>
+<section>
+	<section data-markdown>
+	## Group Projects with Github
+	</section>
 
-# Feature Workflow with other people using github
-2. Clone the repository
+	<section data-markdown>
+### @localhost
+2. Clone the shared repository
 	`git clone git@github.com:username/repository.git`
 3. Create a new feature branch
 	`git branch featureName`
@@ -489,38 +491,55 @@ On a new computer you can clone the repository with the following command
 > This can be done with one command as well. `git checkout -b featureName`
 5. Do some feature work
 6. Commit changes
+	</section>
+
+	<section data-markdown>
 7. When ready to merge the feature back into master we will first want to update the master branch to get the latest code.
-8. Fetch the latest changes.
+8. Fetch the latest changes.  
 	`git fetch --all`
-9. Rebase your branch against master.
+9. Rebase your branch against master.  
 	`git rebase origin/master`
-12. Push your changes up to github.
+12. Push your changes up to github.  
 	`git push origin featureName`
 13. Go to Github and open a pull request from the branch.
 14. Merge the pull request on Github.
 
-__NOTE:__ Once you have pushed the branch up to Github you can no longer rebase against master with the same branch name. To get around this you will need to create a new branch name or delete the existing older one.
+	</section>
+	<section data-markdown>
 
-</section>
-<section data-markdown>
+Once you have pushed the branch up to Github you can no longer rebase against master with the same branch name. To get around this you will need to create a new branch name or delete the existing older one.
+	</section>
 
+	<section data-markdown>
 ### Git local and remote branch cleanup
 * _How do I remove old remote branches that are no longer needed?_
 
-    `git remote prune origin`
+`git remote prune origin`
+	</section>
 
-* _How do I remove local branches that are old?_
+	<section data-markdown>
+### How do I remove local branches that are old? 
 
-    `git branch --merged` will display branches that are safe to delete as they have been merged into master.
+Display branches that are safe to delete as they have been merged into master.
+```
+git branch --merged
+```
 
-__NOTE:__ The above command will display the master branch and you probably don't want to delete that one...
+> The above command will display the master branch and you probably don't want to delete that one...
+	</section>
+	<section data-markdown>
 
-`git branch -d <oldBranchNameListedFromAboveCommand>`
-
+To delete local merged branches
+```
+git branch -d <oldBranchNameListedFromAboveCommand>
+```
 * _How do I force delete a local branch that hasn't been merged?_
 
-    `git branch -D <branchNameWhichHasNotBeenMerged>`
-
+```
+git branch -D <branchNameWhichHasNotBeenMerged>
+```
+	</section>
+	<section data-markdown>    
 ### Git Troubleshooting
 
 #### Unable to push changes because a rebase has already occurred.
@@ -532,11 +551,13 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 'Note about fast-forwards' section of 'git push --help' for details.
 ```
 
-To unblock yourself create a new branch by using `git checkout -b newBranchNameSimilarToTheOldOne`
+To unblock yourself create a new branch by using `git checkout -b   newBranchNameSimilarToTheOldOne`  
+
 Push this branch up instead and feel free to delete the old one if no one else is working off of it.
-
-`git push origin :newBranchNameSimilarToTheOldOne`
-
+```
+git push origin :newBranchNameSimilarToTheOldOne
+```
+	</section>
 </section>
 <section data-markdown>
 
