@@ -138,8 +138,8 @@ git config --global core.safecrlf true
 ```
 ➜  git-demo  cat ~/.gitconfig          (on branch: master | ✔ )
 [user]
-	name = Matt Carrier
-	email = icecreammatt@gmail.com
+	name = Matt Hardwick
+	email = mhardwick@vertigo.com
 [color]
 	ui = true
 [merge]
@@ -363,13 +363,6 @@ docs/_build/
 	* Fetching Changes
 	</section>
 	<section data-markdown>
-* Bisecting
-	</section>
-	<section data-markdown>
-* GitWeb
-	`git instaweb -d webrick`
-	</section>
-	<section data-markdown>
 * Questions
 	</section>
 </section>
@@ -384,7 +377,7 @@ docs/_build/
 
 <section>
 	<section data-markdown>
-	## Personal Projects
+	## Personal Projects Locally
 	</section>
 	<section data-markdown>
 
@@ -408,68 +401,6 @@ $ git log
 # Add more files and repeat
 $ git add <filename>
 $ git commit -m 'Added more files...'
-```
-
-	</section>
-	<section data-markdown>
-
-
-### Adding remote repositories
-
-* To make your work accessible from other machines using a remote linux server do the following: 
-
-1. Login to your remote server that you will use to host the repository.
-2. Create a folder in your home directory named git to store all your repos.
-3. Create a folder to contain the project you will be adding
-4. Initialize the folder as bare repository
-
-	</section>
-	<section data-markdown>
-### @Remotehost
-```
-cd ~/
-mkdir git/project-name.git -p   #Create the project folder
-cd git/project-name.git         
-git init --bare	             #Initialize empty repository
-Initialized empty Git repository in /home/matt/git/project-name.git/
-```
-
-	</section>
-	<section data-markdown>
-
-### @Localhost
-Add the remote server to your repo
-```
-git remote add server_name ssh://username@servername.domain:git/project-name.git
-git push -u --all server_name
-```
-
-To Push additional changes you make after committing
-```
-git push server_name branch_name
-```
-
-	</section>
-	<section data-markdown>
-### @Localhost
-To Pull changes down and merge into your code
-```
-git fetch --all`
-git rebase server_name/branch_name
-```
-
-Or Use
-```
-git pull --rebase server_name branch_name 
-
-```
-Using rebase will prevent a merge commit
-	</section>
-	<section data-markdown>
-### @Localhost 2
-On a new computer you can clone the repository with the following command
-```
-	git clone username@servername.domain:git/project-name.git
 ```
 
 	</section>
@@ -624,15 +555,19 @@ git push origin :newBranchNameSimilarToTheOldOne
 
 ## About
 
-- Matt Carrier
-	- Web [mattcarrier.com](mattcarrier.com)
-	- Github [@icecreammatt](https://github.com/icecreammatt)
-	- Twitter [@icecreammatt](https://twitter.com/icecreammatt)
-
 - Matt Hardwick
 	- Github [@matthewhardwick](https://github.com/matthewhardwick)
 	- Twitter [@matthewhardwick](https://twitter.com/matthewhardwick)
 
+- Kelsey Rangel
+	- Github [@krangel](https://github.com/krangel)
+	- Bitbucket [@krangel](https://bitbucket.org/krangel)
+
+- Cheryl MacDonald 
+	- Website [cherylaimee.com](http://www.cherylaimee.com)
+	- Twitter [@cherylaimee](http://twitter.com/cherylaimee)
+	- Github [@cherylaimee](https://github.com/cherylaimee)
+	
 </section>
 </div>
 
